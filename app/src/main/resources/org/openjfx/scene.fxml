@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Pos?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="org.openjfx.FXMLController">
+    <children>
+        <!-- ComboBox for language selection -->
+        <ComboBox fx:id="languageComboBox" layoutX="50" layoutY="50" visible="false"/>
+        
+        <!-- Button to select project -->
+        <Button text="Select Project" layoutX="50" layoutY="100" onAction="#handleSelectProject"/>
+        
+        <!-- Label to display detected language -->
+        <Label fx:id="outputLabel" text="Detected Language: " layoutX="50" layoutY="150"/>
+        
+        <!-- TextArea to display the build output and errors -->
+        <TextArea fx:id="outputTextArea" layoutX="50" layoutY="200" prefWidth="400" prefHeight="200" wrapText="true" editable="false"/>
+        
+        <!-- Button to trigger build and handle language selection -->
+        <Button text="Run Build" layoutX="50" layoutY="420" onAction="#handleLanguageSelection"/>
+        
+        <!-- CheckBox for enabling/disabling the test phase -->
+        <CheckBox fx:id="testCheckBox" text="Run Tests" layoutX="50" layoutY="450" selected="true"/>
+        
+        <!-- Label for error and output messages -->
+        <Label fx:id="errorLabel" text="" layoutX="50" layoutY="480" textFill="red" visible="false"/>
+    </children>
+</AnchorPane>
